@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import Cart from './components/Cart'
 import { items } from './components/Data'
+import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 import Product from './components/Product'
 import ProductDetail from './components/ProductDetail'
@@ -21,7 +22,7 @@ const App = () => {
       <Route path="/search/:term" element={<SearchItem cart={cart} setCart={setCart} />} />
       <Route path="/cart" element={<Cart cart={cart} setCart={setCart} />} />
     </Routes>
-  
+    <Footer />
     </Router>
     </>
   )
